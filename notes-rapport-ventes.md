@@ -1,7 +1,7 @@
 # Rapport Ventes — notes de conception
 
 ## Page Synthèse
-- Carte : chiffre d'affaires HT
+- Carte : CA HT cumulé depuis janvier
 - Carte : nombre de commandes
 - Graphique : CA par mois
 
