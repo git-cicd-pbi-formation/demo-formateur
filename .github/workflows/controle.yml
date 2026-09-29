@@ -1,0 +1,22 @@
+# Contrôle automatique de démonstration (Jour 1).
+# Au Jour 2, c'est ici que tourne l'analyse Best Practice Analyzer.
+name: controle
+on:
+  pull_request:
+    branches: [dev, main]
+jobs:
+  controle-nommage:
+    name: controle-nommage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vérifier le nom de la branche source
+        env:
+          SOURCE: ${{ github.head_ref }}
+        run: |
+          echo "Branche source : $SOURCE"
+          if [[ "$SOURCE" =~ ^(feature|hotfix)/[a-z0-9_-]+$ ]]; then
+            echo "Nom conforme à la convention feature/… ou hotfix/…"
+          else
+            echo "::error::La branche « $SOURCE » ne respecte pas la convention : feature/… ou hotfix/…, en minuscules, sans espace ni accent."
+            exit 1
+          fi
