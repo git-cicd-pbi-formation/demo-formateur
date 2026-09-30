@@ -8,3 +8,4 @@
 ## Page Ventes
 - Tableau : CA par produit
 - Segment : année
+- Segment : région
