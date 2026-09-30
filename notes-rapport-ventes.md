@@ -1,7 +1,7 @@
 # Rapport Ventes — notes de conception
 
 ## Page Synthèse
-- Carte : chiffre d'affaires HT
+- Carte : chiffre d'affaires HT (en k€)
 - Carte : nombre de commandes
 - Graphique : CA par mois
 
